@@ -26,7 +26,7 @@ public class UtilisateurService {
     public Optional<Utilisateur> getUserByUsername(String username){
         return utilisateurRepository.findByUsername(username);
     }
-    public Utilisateur updateUser(Long id, Utilisateur user) {
+  /*  public Utilisateur updateUser(Long id, Utilisateur user) {
         return utilisateurRepository.findById(id)
                 .map(utilisateur -> {
                     utilisateur.setNom(user.getNom());
@@ -36,7 +36,7 @@ public class UtilisateurService {
                     return utilisateurRepository.save(utilisateur);
                 })
                 .orElseThrow(() -> new RuntimeException("Utilisateur non trouvé"));
-    }
+    }*/
     public void deleteUser(Long id) {
         utilisateurRepository.deleteById(id);
     }

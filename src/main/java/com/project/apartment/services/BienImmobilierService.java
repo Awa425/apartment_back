@@ -18,13 +18,13 @@ public class BienImmobilierService {
     public BienImmobilier addBienImmobilier(BienImmobilier bien){
         return bienImmobilierRepository.save(bien);
     }
-    public List<BienImmobilier> listNienImmobilier(){
+    public List<BienImmobilier> listBienImmobilier(){
         return bienImmobilierRepository.findAll();
     }
     public Optional<BienImmobilier> getBienById(Long id){
         return bienImmobilierRepository.findById(id);
     }
-    public BienImmobilier updateBien(Long id, BienImmobilier bienDetails) {
+   /* public BienImmobilier updateBien(Long id, BienImmobilier bienDetails) {
         return bienImmobilierRepository.findById(id)
                 .map(bien -> {
                     bien.setType(bienDetails.getType());
@@ -36,7 +36,7 @@ public class BienImmobilierService {
                     return bienImmobilierRepository.save(bien);
                 })
                 .orElseThrow(() -> new RuntimeException("Bien immobilier non trouvé"));
-    }
+    }*/
     public void deleteBien(Long id) {
         bienImmobilierRepository.deleteById(id);
     }
